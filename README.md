@@ -9,5 +9,5 @@ Height and wingspan inference from VR model geometries
 Escape room game element tests short-term memory
 
 
-![demo3](demo2.png)
+![demo3](demo3.png)
 Balloon popping game tests proximity and reaction time
