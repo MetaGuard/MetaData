@@ -11,6 +11,7 @@ public class Teleporter : MonoBehaviour {
     public GameObject b2;
     public GameObject b3;
     public AudioSource bs;
+    public AudioClip win;
     public AudioClip pop;
     public GameObject c1;
     public GameObject c2;
@@ -35,11 +36,11 @@ public class Teleporter : MonoBehaviour {
       Vector3[] pos = new Vector3[] {
         new Vector3(-7.698f, -3.5f, -17.471f),  // room 1 - hello
         new Vector3(-7.698f, -3.5f, -12.471f),  // room 2 - face
-        new Vector3(-7.698f, -3.5f, -3.044f),   // room 3 - captcha - velvet
+        new Vector3(-7.698f, -3.5f, -2.044f),   // room 3 - captcha - velvet
         new Vector3(-10.701f, 0f, -4.24f),      // room 4 - find letters - church
         new Vector3(10.391f, 0f, -4.24f),       // room 5 - color vision - daisy
         new Vector3(25.165f, 0f, -9.365f),      // room 6 - proximity - red
-        new Vector3(11.584f, 0f, -16.135f),     // room 7 - MOCA - recluse
+        new Vector3(15.658f, 0f, -15.61f),      // room 7 - MOCA - recluse
         new Vector3(-25.475f, 0f, -7.88f),      // room 8 - wingspan - cave
         new Vector3(-15.587f, 0f, -17.425f),    // room 9 - fitness - motivation
         new Vector3(-21.032f, 0f, -16.16f),     // room 10 - puzzle - deafening
@@ -51,6 +52,7 @@ public class Teleporter : MonoBehaviour {
 
       if (Input.GetKeyDown("space")) {
         this.transform.position = pos[index++];
+        bs.PlayOneShot(win, 1f);
       }
 
       if (Input.GetKeyDown("b")) {
