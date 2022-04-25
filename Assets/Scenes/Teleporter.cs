@@ -36,14 +36,17 @@ public class Teleporter : MonoBehaviour {
         new Vector3(-7.698f, -3.5f, -17.471f),  // room 1 - hello
         new Vector3(-7.698f, -3.5f, -12.471f),  // room 2 - face
         new Vector3(-7.698f, -3.5f, -3.044f),   // room 3 - captcha - velvet
-        new Vector3(-10.701f, 0f, -4.24f),   // room 4 - find letters - church
-        new Vector3(10.391f, 0f, -4.24f),   // room 5 - color vision - daisy
-        new Vector3(25.165f, 0f, -9.365f),   // room 6 - proximity - red
-        new Vector3(11.584f, 0f, -16.135f),   // room 7 - MOCA - recluse
-        new Vector3(-25.475f, 0f, -7.88f),   // room 8 - wingspan - cave
-        new Vector3(-15.587f, 0f, -17.425f),   // room 9 - fitness - motivation
-        new Vector3(-21.032f, 0f, -16.16f),   // room 10 - puzzle - deafening
-        new Vector3(21.01f, 0f, -15.04f)   // room 11 - reaction time - flash
+        new Vector3(-10.701f, 0f, -4.24f),      // room 4 - find letters - church
+        new Vector3(10.391f, 0f, -4.24f),       // room 5 - color vision - daisy
+        new Vector3(25.165f, 0f, -9.365f),      // room 6 - proximity - red
+        new Vector3(11.584f, 0f, -16.135f),     // room 7 - MOCA - recluse
+        new Vector3(-25.475f, 0f, -7.88f),      // room 8 - wingspan - cave
+        new Vector3(-15.587f, 0f, -17.425f),    // room 9 - fitness - motivation
+        new Vector3(-21.032f, 0f, -16.16f),     // room 10 - puzzle - deafening
+        new Vector3(21.01f, 0f, -15.04f),       // room 11 - reaction time - flash
+        new Vector3(-22.149f, 3.5f, -17.242f),  // room 12 - ceiling - flash
+        new Vector3(-22.149f, 3.5f, -17.242f),  // room 13 - language - apple
+        new Vector3(-25.293f, 3.5f, -8.354f)    // room 14 - pattern - i can
       };
 
       if (Input.GetKeyDown("space")) {
