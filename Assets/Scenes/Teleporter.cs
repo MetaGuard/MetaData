@@ -41,7 +41,9 @@ public class Teleporter : MonoBehaviour {
         new Vector3(25.165f, 0f, -9.365f),   // room 6 - proximity - red
         new Vector3(11.584f, 0f, -16.135f),   // room 7 - MOCA - recluse
         new Vector3(-25.475f, 0f, -7.88f),   // room 8 - wingspan - cave
-        new Vector3(-15.587f, 0f, -17.425f)   // room 9 - fitness - motivation
+        new Vector3(-15.587f, 0f, -17.425f),   // room 9 - fitness - motivation
+        new Vector3(-21.032f, 0f, -16.16f),   // room 10 - puzzle - deafening
+        new Vector3(21.01f, 0f, -15.04f)   // room 11 - reaction time - flash
       };
 
       if (Input.GetKeyDown("space")) {
