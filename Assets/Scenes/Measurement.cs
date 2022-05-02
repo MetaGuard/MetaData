@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -18,6 +19,7 @@ public class Measurement : MonoBehaviour {
   Ping ping3;
   Ping ping4;
   Ping ping5;
+  StreamWriter writer;
 
   void Start() {
     lastUpdate = Time.time;
@@ -31,64 +33,63 @@ public class Measurement : MonoBehaviour {
     ping4 = new Ping("52.219.107.9");   // us-east-2 - ohio
     ping5 = new Ping("52.95.146.225");  // ca-central-1	- central canada
 
+    writer = new StreamWriter("Data/" + System.DateTime.Now.ToString("F").Replace(",", "").Replace(':', '-') + ".txt", true);
+
     StartCoroutine (PingUpdate());
   }
 
   IEnumerator PingUpdate() {
       yield return new WaitForSeconds (1f);
       if (ping1.isDone && ping2.isDone && ping3.isDone && ping4.isDone && ping5.isDone) {
-        print("us-west-1: " + ping1.time);
-        print("us-west-2: " + ping2.time);
-        print("us-east-1: " + ping3.time);
-        print("us-east-2: " + ping4.time);
-        print("ca-central-1: " + ping5.time);
-      } else {
-        StartCoroutine (PingUpdate ());
+        writer.WriteLine("us-west-1: " + ping1.time);
+        writer.WriteLine("us-west-2: " + ping2.time);
+        writer.WriteLine("us-east-1: " + ping3.time);
+        writer.WriteLine("us-east-2: " + ping4.time);
+        writer.WriteLine("ca-central-1: " + ping5.time);
+        ping1 = new Ping("52.219.116.88");  // us-west-1 - north california
+        ping2 = new Ping("52.218.225.128"); // us-west-2 - oregon
+        ping3 = new Ping("52.217.164.24");  // us-east-1 - north virginia
+        ping4 = new Ping("52.219.107.9");   // us-east-2 - ohio
+        ping5 = new Ping("52.95.146.225");  // ca-central-1	- central canada
+
+        // resolution
+        writer.WriteLine("camera-w: " + XRCamera.pixelWidth);
+        writer.WriteLine("camera-h: " + XRCamera.pixelHeight);
+
+        // IPD
+        Vector3 leftEye = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.LeftEye);
+        Vector3 rightEye = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.RightEye);
+        writer.WriteLine("ipd: " + Vector3.Distance(leftEye, rightEye));
       }
+      writer.Close();
+      writer = new StreamWriter("Data/" + System.DateTime.Now.ToString("F").Replace(",", "").Replace(':', '-') + ".txt", true);
+      StartCoroutine (PingUpdate ());
   }
 
   void Update() {
-    // resolution
-    // print("w: " + XRCamera.pixelWidth);
-    // print("h: " + XRCamera.pixelHeight);
-
     // refresh rate
-    // float delta = Time.time - lastRefresh;
-    // float rate = 1f / delta;
-    // print("Refresh Rate: " + rate);
-    // lastRefresh = Time.time;
+    float delta = Time.time - lastRefresh;
+    float rate = 1f / delta;
+    writer.WriteLine("refresh-rate: " + rate);
+    lastRefresh = Time.time;
 
     // tracking rate
-    // if (!(leftControllerPos.Equals(LeftController.transform.localPosition) && rightControllerPos.Equals(RightController.transform.localPosition))) {
-    //   float delta = Time.time - lastUpdate;
-    //   float rate = 1f / delta;
-    //
-    //   print("Tracking Rate: " + rate);
-    //
-    //   leftControllerPos = LeftController.transform.localPosition;
-    //   rightControllerPos = RightController.transform.localPosition;
-    //   lastUpdate = Time.time;
-    // }
+    if (!(leftControllerPos.Equals(LeftController.transform.localPosition) && rightControllerPos.Equals(RightController.transform.localPosition))) {
+      delta = Time.time - lastUpdate;
+      rate = 1f / delta;
 
-    // height
-    // print("Height: " + MainCamera.transform.localPosition.y);
+      writer.WriteLine("tracking-rate: " + rate);
+
+      leftControllerPos = LeftController.transform.localPosition;
+      rightControllerPos = RightController.transform.localPosition;
+      lastUpdate = Time.time;
+    }
+
+    // height & room size
+    writer.WriteLine("main-camera: " + MainCamera.transform.localPosition);
 
     // wingspan
-    // print("Wingspan: " + Vector3.Distance(LeftController.transform.localPosition, RightController.transform.localPosition));
-
-    // room size
-    // print("Position x: " + MainCamera.transform.localPosition.x);
-    // print("Position z: " + MainCamera.transform.localPosition.z);
-
-    // IPD
-    // print("IPD: " + XRCamera.stereoSeparation);
-    // Matrix4x4 leftMatrix = XRCamera.GetStereoViewMatrix(Camera.StereoscopicEye.Left);
-    // Matrix4x4 rightMatrix = XRCamera.GetStereoViewMatrix(Camera.StereoscopicEye.Right);
-    // print(leftMatrix);
-    // print(rightMatrix);
-
-    // Vector3 leftEye = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.LeftEye);
-    // Vector3 rightEye = UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.RightEye);
-    // print("IPD: " + Vector3.Distance(leftEye, rightEye));
+    writer.WriteLine("left-controller: " + LeftController.transform.localPosition);
+    writer.WriteLine("right-controller: " + RightController.transform.localPosition);
   }
 }
