@@ -18,6 +18,7 @@ __Contents__
 - [Getting Started](#getting-started)
 - [Game Overview](#game-overview)
 - [Data Collection Tools](#data-collection-tools)
+- [Data Analysis Overview](#data-analysis-overview)
 - [Data Analysis Scripts](#data-analysis-scripts)
 - [Sample Data & Results](#sample-data--results)
 
@@ -194,52 +195,42 @@ The above figure shows an overview of the escape room building and several of th
 </table>
 
 ## Data Collection Tools
-We have included in this repository the [data collection log template](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Log.pdf) used by the experimenters to record gameplay observations. This can be digitized to produce a `log.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv)). We have also included . To obtain user consent, you are welcome to use our [IRB-cleared consent language](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Consent.pdf). We additionally suggest the use of audio/video recordings which can be reviewed if necessary.
+We have included in this repository the [data collection log template](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Log.pdf) used by the experimenters to record gameplay observations. This can be digitized to produce a `log.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv)). We have also included a [post-game survey](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Survey.pdf) for collecting ground truth, which can be digitized to produce a `truth.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/truth.csv)). To obtain user consent before the experiment, you are welcome to use our [IRB-cleared consent language](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Consent.pdf). We additionally suggest the use of audio/video recordings which can be reviewed if necessary.
 
-## Data Analysis Scripts
-
-## Sample Data & Results
-
-
-
-## Data Sources
-![method](Images/method.png)<br>
+## Data Analysis Overview
+<img src="Images/method.png" width="350px" /><br />
+The above diagram summarizes the data sources and attributes we observe from collected data. Examples of data sources and corresponding attributes are included below:
 
 ### Geospatial Telemetry
 #### Biometric Measurements
 ![geometry](Images/geometry.png)<br>
-Identifying height and wingspan from tracking telemetry
+(E.g. Identifying height and wingspan from tracking telemetry)
 
 #### Environmental Measurements
 ![room](Images/room.png)<br>
-Identifying room dimensions from tracking telemetry
+(E.g. Identifying room dimensions from tracking telemetry)
 
-### Device Specifications
-![refresh](Images/refresh.png)<br>
-Identifying device refresh rate from tracking data
+### Device
+![locality](Images/device-hist.png)<br>
+(E.g. Identifying device tracking and refresh rate)
 
-### Location
+### Network
 ![locality](Images/locality.png)<br>
-Identifying user location from server proximity
+(E.g. Identifying user location from server latency multilateration)
 
+### Behavioral
+![locality](Images/handedness.png)<br>
+(E.g. Identifying handedness from observed interactions)
 
-### Behavioral Observations
-#### Languages
-![language](Images/language.png)<br>
-Identifying languages spoken by tracking visual attention
+## Data Analysis Scripts
+The [/Scripts](https://github.com/VCNinc/MetaData/tree/main/Scripts) folder includes data collection and analysis scripts for a number of different primary and secondary attributes. The scripts require the `/Data` folder to include a sequentially numbered .txt file for each participant, a `log.csv` file with the observations for all participants, and a `truth.csv` file with the ground truth for all participants. Statistical results will be printed to the CLI, and generated figures will be stored in `/Figures`.
 
-#### Handedness
-![handedness](Images/handedness.png)<br>
-Identifying handedness by observing user interactions
+**Dependencies**<br>
+The python 3 data analysis scripts depend on the following libraries:
+- matplotlib
+- numpy
+- scipy
+- geopy
 
-#### Reaction Time
-![reaction](Images/reaction.png)<br>
-Identifying reaction time by observing user interactions
-
-#### Vision
-![close](Images/close.png)<br>
-Identifying visual acuity by tracking user perception
-
-#### Acuity
-![memory](Images/memory.png)<br>
-Assessing memory by measuring user performance
+## Sample Data & Results
+If you do not wish to run the experiment yourself to generate raw data, we have included sample data files for the PI ([1.txt](https://github.com/VCNinc/MetaData/blob/main/Data/1.txt)) and co-PI ([2.txt](https://github.com/VCNinc/MetaData/blob/main/Data/2.txt)) in the [/Data](https://github.com/VCNinc/MetaData/tree/main/Data) directory, along with corresponding [log.csv](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv) and [truth.csv](https://github.com/VCNinc/MetaData/blob/main/Data/truth.csv) files. The [/Figures](https://github.com/VCNinc/MetaData/tree/main/Figures) directory contains the outputs corresponding to this sample data.
