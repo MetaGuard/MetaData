@@ -26,7 +26,7 @@ __Contents__
 The entire repository (outermost folder) is a Unity project folder built for editor version 2021.3.1f1. It can be opened in Unity and built for a target platform of your choice. We have also provided a [pre-built executable](https://github.com/VCNinc/MetaData/releases) for SteamVR on Windows (64-bit), which has been verified to work on the HTC Vive, HTC Vive Pro 2, and Oculus Quest 2 using Oculus Link. If you decide to build the project yourself, make sure you add a "Data" folder to the output directory where the game can store collected telemetry.
 
 ### Running & Data Collection
-Run "Metadata.exe" to launch the game. Approximately once every second, the game will output a .txt file containing the relevant observations from the last second of gameplay. At the end of the experiment, these files can be concatenated into a single data file to be used for later analysis: `cat *.txt > data.txt`.
+Run `Metadata.exe` to launch the game. Approximately once every second, the game will output a .txt file containing the relevant observations from the last second of gameplay. At the end of the experiment, these files can be concatenated into a single data file to be used for later analysis: `cat *.txt > data.txt`.
 
 ### Controls
 The following keyboard controls are available (intended for use by the researcher conducting the experiment):
@@ -194,7 +194,7 @@ The above figure shows an overview of the escape room building and several of th
 </table>
 
 ## Data Collection Tools
-
+We have included in this repository the [data collection log template](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Log.pdf) used by the experimenters to record gameplay observations. This can be digitized to produce a `log.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv)).  We additionally suggest the use of audio/video recordings.
 
 ## Data Analysis Scripts
 
