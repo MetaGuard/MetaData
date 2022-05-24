@@ -46,7 +46,155 @@ Many of these controls will make more sense in the context of the game overview.
 ![game overview](Images/all-label.png)<br>
 The above figure shows an overview of the escape room building and several of the rooms contained within it. Players move from room to room within the building, completing one or more puzzles to find a "password" before moving to the next room. Further details about each of the rooms are included below.
 
+<table>
+  <tr>
+    <td>
+      <b>Room 1: Hello</b>
+      <img src="Images/image10.png" />
+      <i>Code: Hello</i>
+    </td>
+    <td>
+      <b>Room 2: Face</b>
+      <img src="Images/image6.png" />
+      <i>Code: Face</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 3: CAPTCHA</b>
+      <img src="Images/image11.png" />
+      <i>Code: Velvet</i>
+    </td>
+    <td>
+      <b>Room 4: Find Letters</b>
+      <img src="Images/image7.png" />
+      <i>Code: Church</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 5: Color Vision</b>
+      <img src="Images/image8.png" />
+      <i>Code: Daisy</i>
+    </td>
+    <td>
+      <b>Room 6: Proximity</b>
+      <img src="Images/image14.png" />
+      <i>Code: Red</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 7: MOCA Memory</b>
+      <img src="Images/image15.png" />
+      <i>Code: Recluse</i>
+    </td>
+    <td>
+      <b>Room 8: Wingspan</b>
+      <img src="Images/image3.png" />
+      <i>Code: Cave</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 9: Fitness</b>
+      <img src="Images/fitness.png" />
+      <i>Code: Motivation</i>
+    </td>
+    <td>
+      <b>Room 10: Puzzle</b>
+      <img src="Images/image5.png" />
+      <i>Code: Deafening</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 11: Reaction Time</b>
+      <img src="Images/reaction.png" />
+      <i>Code: Flash</i>
+    </td>
+    <td>
+      <b>Room 12: Ceiling</b>
+      <img src="Images/image1.png" />
+      <i>Code: Finally</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 13: Language</b>
+      <img src="Images/language.png" />
+      <i>Code: Apple</i>
+    </td>
+    <td>
+      <b>Room 14: Pattern</b>
+      <img src="Images/image18.png" />
+      <i>Code: I can</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 15: Frame Rate</b>
+      <img src="Images/image19.png" />
+      <i>Code: Lion, Rhino, Camel</i>
+    </td>
+    <td>
+      <b>Room 16: MOCA Naming</b>
+      <img src="Images/image2.png" />
+      <i>Code: Recluse</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 17: MOCA Attention</b>
+      <img src="Images/image17.png" />
+      <i>Code: 93, 86, 79, 72, 65</i>
+    </td>
+    <td>
+      <b>Room 18: MOCA Delayed Recall</b>
+      <img src="Images/image15.png" />
+      <i>Code: Recluse</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 19: MOCA Abstraction</b>
+      <img src="Images/image16.png" />
+      <i>Code: Transportation, Measurement</i>
+    </td>
+    <td>
+      <b>Room 20: MOCA Language</b>
+      <img src="Images/image4.png" />
+      <i>Code: N/A</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 21: Face Recognition</b>
+      <img src="Images/image4.png" />
+      <i>Code: Einstein</i>
+    </td>
+    <td>
+      <b>Room 22: MOCA Orientation</b>
+      <img src="Images/image13.png" />
+      <i>Code: N/A</i>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Room 23: Close Vision</b>
+      <img src="Images/image9.png" />
+      <i>Code: Twelve</i>
+    </td>
+    <td>
+      <b>Room 24: Distance Vision</b>
+      <img src="Images/distance.png" />
+      <i>Code: Digital Playground</i>
+    </td>
+  </tr>
+</table>
+
 ## Data Collection Tools
+
 
 ## Data Analysis Scripts
 
