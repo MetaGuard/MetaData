@@ -194,7 +194,7 @@ The above figure shows an overview of the escape room building and several of th
 </table>
 
 ## Data Collection Tools
-We have included in this repository the [data collection log template](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Log.pdf) used by the experimenters to record gameplay observations. This can be digitized to produce a `log.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv)).  We additionally suggest the use of audio/video recordings.
+We have included in this repository the [data collection log template](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Log.pdf) used by the experimenters to record gameplay observations. This can be digitized to produce a `log.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv)). We have also included . To obtain user consent, you are welcome to use our [IRB-cleared consent language](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Consent.pdf). We additionally suggest the use of audio/video recordings which can be reviewed if necessary.
 
 ## Data Analysis Scripts
 
