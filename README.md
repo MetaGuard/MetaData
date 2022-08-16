@@ -5,6 +5,8 @@ MetaData: Exploring unprecedented avenues for data harvesting in emerging AR/VR 
 [![GitHub tag](https://img.shields.io/github/tag/vcninc/metadata.svg)](https://github.com/vcninc/metadata/tags)
 [![GitHub release](https://img.shields.io/github/release/vcninc/metadata.svg)](https://github.com/vcninc/metadata/releases)
 
+[Paper](https://arxiv.org/abs/2207.13176) |
+[Website](https://rdi.berkeley.edu/metadata) |
 [Game](https://github.com/VCNinc/MetaData/releases) |
 [Scripts](https://github.com/VCNinc/MetaData/tree/main/Scripts) |
 [Sample Data](https://github.com/VCNinc/MetaData/tree/main/Data) |
@@ -13,6 +15,10 @@ MetaData: Exploring unprecedented avenues for data harvesting in emerging AR/VR 
 [Co-Developer](https://github.com/gonzalo-munillag)
 
 This repository contains a virtual reality "escape room" game written in C# using the Unity game engine. It is the chief data collection tool for a research study called "MetaData," which aims to shed light on the unique privacy risks of virtual telepresence ("metaverse") applications. While the game appears innocuous, it attempts to covertly harvest 25+ private data attributes about its player from a variety of sources within just a few minutes of gameplay.
+
+_We appreciate the support of the National Science Foundation, the National Physical Science Consortium, the Fannie and John Hertz Foundation, and the Berkeley Center for Responsible, Decentralized Intelligence._
+
+[https://doi.org/10.48550/arXiv.2207.13176](https://doi.org/10.48550/arXiv.2207.13176)
 
 __Contents__
 - [Getting Started](#getting-started)
