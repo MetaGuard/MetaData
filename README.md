@@ -200,6 +200,13 @@ The above figure shows an overview of the escape room building and several of th
   </tr>
 </table>
 
+For most rooms, the researcher simply needs to press the “space” button to move to the next room when the subject says the correct password. The few exceptions are as follows:
+
+- Room 6: The researcher presses the “P” button when the subject presses the red button in the game, then presses “space” to move to the next room when the subject says “red.”
+- Room 8: The researcher presses the “U” button when the subject adopts the correct physical posture according to the figures on the wall, then presses “space” when the subject says “cave.”
+- Room 9: The researcher presses the “M” button when the subject adopts the correct position according to the figures on the wall, then presses “space” when the subject says “motivation.”
+- Room 20: Press “C” when the subject enters this room. Press “V” after the subject repeats the first sentence. Press “space” after the subject repeats the second sentence.
+
 ## Data Collection Tools
 We have included in this repository the [data collection log template](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Log.pdf) used by the experimenters to record gameplay observations. This can be digitized to produce a `log.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv)). We have also included a [post-game survey](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Survey.pdf) for collecting ground truth, which can be digitized to produce a `truth.csv` file for all participants (see [example](https://github.com/VCNinc/MetaData/blob/main/Data/truth.csv)). To obtain user consent before the experiment, you are welcome to use our [IRB-cleared consent language](https://github.com/VCNinc/MetaData/blob/main/Docs/Metadata_Consent.pdf). We additionally suggest the use of audio/video recordings which can be reviewed if necessary.
 
@@ -237,6 +244,9 @@ The python 3 data analysis scripts depend on the following libraries:
 - numpy
 - scipy
 - geopy
+
+**Running**<br>
+With the data in the Data folder and the dependencies installed, you can simply run the scripts one by one: `py Arms.py`, `py Device.py`, etc. The results will be printed to the command line.
 
 ## Sample Data & Results
 If you do not wish to run the experiment yourself to generate raw data, we have included sample data files for the PI ([1.txt](https://github.com/VCNinc/MetaData/blob/main/Data/1.txt)) and co-PI ([2.txt](https://github.com/VCNinc/MetaData/blob/main/Data/2.txt)) in the [/Data](https://github.com/VCNinc/MetaData/tree/main/Data) directory, along with corresponding [log.csv](https://github.com/VCNinc/MetaData/blob/main/Data/log.csv) and [truth.csv](https://github.com/VCNinc/MetaData/blob/main/Data/truth.csv) files. The [/Figures](https://github.com/VCNinc/MetaData/tree/main/Figures) directory contains the outputs corresponding to this sample data.
